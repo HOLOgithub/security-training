@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新入社員セキュリティ教育資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.7;
+        }
+        
+        .section-gradient-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .section-gradient-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .section-gradient-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .section-gradient-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .section-gradient-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .section-gradient-6 { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+        .section-gradient-7 { background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); }
+        
+        .quiz-correct { background-color: #10b981; }
+        .quiz-incorrect { background-color: #ef4444; }
+        .quiz-option:hover { transform: translateY(-2px); transition: all 0.3s ease; }
+        
+        .icon-bounce { animation: bounce 2s infinite; }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .highlight-box {
+            border-left: 4px solid #3b82f6;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        
+        .risk-item {
+            transition: all 0.3s ease;
+        }
+        
+        .risk-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media print {
+            body { print-color-adjust: exact; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        
+        <!-- Header -->
+        <header class="text-center mb-12 p-8 bg-white rounded-xl shadow-lg">
+            <div class="flex items-center justify-center mb-6">
+                <i class="fas fa-shield-alt text-6xl text-blue-600 mr-4 icon-bounce"></i>
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-800 mb-2">📘 新入社員セキュリティ教育資料</h1>
+                    <p class="text-lg text-gray-600">情報セキュリティの基本を学ぼう</p>
+                </div>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg">
+                <p class="text-sm text-blue-800"><i class="fas fa-info-circle mr-2"></i>この資料を通じて、会社の情報資産を守るための基本知識を身につけましょう</p>
+            </div>
+        </header>
+
+        <!-- Section 1: はじめに -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="section-gradient-1 p-6 text-white">
+                <h2 class="text-3xl font-bold mb-3">
+                    <i class="fas fa-flag-checkered mr-3"></i>1. はじめに
+                </h2>
+                <p class="text-lg opacity-90">本資料の目的とセキュリティの重要性について</p>
+            </div>
+            <div class="p-8">
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                            <i class="fas fa-target mr-2"></i>本資料の目的
+                        </h3>
+                        <p class="text-gray-700">新入社員の皆様に情報セキュリティの基本知識を身につけていただき、日常業務での適切な行動を促進することを目的としています。</p>
+                    </div>
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3 text-red-600">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>セキュリティ事故の影響
+                        </h3>
+                        <p class="text-gray-700">セキュリティ事故は、会社の信頼失墜、経済的損失、法的責任など、深刻な影響をもたらします。一度失った信頼を回復するには長い時間がかかります。</p>
+                    </div>
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3 text-green-600">
+                            <i class="fas fa-users mr-2"></i>社員一人ひとりの責任
+                        </h3>
+                        <p class="text-gray-700">情報セキュリティは特定の部署だけの問題ではありません。社員一人ひとりの意識と行動が会社を守る重要な盾となります。</p>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-lightbulb text-yellow-600 text-xl mr-3"></i>
+                        <h4 class="text-lg font-semibold text-yellow-800">重要なポイント</h4>
+                    </div>
+                    <p class="text-yellow-800">セキュリティは「やらされるもの」ではなく、「会社と自分を守るために必要なもの」という意識を持つことが大切です。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: なぜ情報セキュリティが必要なのか -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="section-gradient-2 p-6 text-white">
+                <h2 class="text-3xl font-bold mb-3">
+                    <i class="fas fa-question-circle mr-3"></i>2. なぜ情報セキュリティが必要なのか
+                </h2>
+                <p class="text-lg opacity-90">現代社会におけるセキュリティ脅威の実態</p>
+            </div>
+            <div class="p-8">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">
+                        <i class="fas fa-chart-line mr-3 text-red-500"></i>社会情勢
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 p-6 rounded-lg border border-red-200">
+                            <h4 class="text-lg font-semibold mb-3 text-red-700">
+                                <i class="fas fa-bug mr-2"></i>サイバー攻撃の増加
+                            </h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• 年々巧妙化するフィッシング攻撃</li>
+                                <li>• ランサムウェアによる企業活動停止</li>
+                                <li>• 標的型攻撃による機密情報窃取</li>
+                                <li>• SNSを悪用した情報収集</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-6 rounded-lg border border-orange-200">
+                            <h4 class="text-lg font-semibold mb-3 text-orange-700">
+                                <i class="fas fa-database mr-2"></i>情報漏洩事件の実例
+                            </h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• 大手企業の個人情報流出（数百万件規模）</li>
+                                <li>• 医療機関の患者データ漏洩</li>
+                                <li>• 金融機関のシステム障害</li>
+                                <li>• 官公庁の機密文書流出</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">
+                        <i class="fas fa-building mr-3 text-blue-500"></i>実際の企業事例
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-red-500">
+                            <h4 class="font-semibold text-gray-800 mb-2">事例1: メール誤送信による顧客情報漏洩</h4>
+                            <p class="text-gray-700 mb-3">宛先を間違えて顧客リストを外部に送信。結果：謝罪、システム改修費用1000万円、顧客離れ</p>
+                            <div class="bg-red-100 p-3 rounded text-red-800 text-sm">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>教訓：送信前の確認の重要性
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-red-500">
+                            <h4 class="font-semibold text-gray-800 mb-2">事例2: USBメモリの紛失</h4>
+                            <p class="text-gray-700 mb-3">営業担当者が顧客データ入りUSBを電車内で紛失。結果：全顧客への謝罪、契約解除</p>
+                            <div class="bg-red-100 p-3 rounded text-red-800 text-sm">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>教訓：私物デバイスでの業務データ持ち出し禁止
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-800">
+                        <i class="fas fa-home mr-3"></i>中小企業も例外ではない
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                        <div>
+                            <h4 class="font-semibold mb-2">狙われる理由</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>• セキュリティ対策が不十分</li>
+                                <li>• 大企業への踏み台として利用</li>
+                                <li>• 専門知識を持つ人材が不足</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">被害の深刻さ</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>• 復旧費用が経営を圧迫</li>
+                                <li>• 信頼失墜による取引停止</li>
+                                <li>• 事業継続困難に陥るケースも</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 日常業務に潜むセキュリティリスク -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="section-gradient-3 p-6 text-white">
+                <h2 class="text-3xl font-bold mb-3">
+                    <i class="fas fa-search mr-3"></i>3. 日常業務に潜むセキュリティリスク
+                </h2>
+                <p class="text-lg opacity-90">身近なところに潜む様々な危険</p>
+            </div>
+            <div class="p-8">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">
+                        <i class="fas fa-exclamation-triangle mr-3 text-yellow-500"></i>身近なリスク例
+                    </h3>
+                </div>
+                
+                <div class="grid gap-6">
+                    <div class="risk-item bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg border border-red-200">
+                        <div class="flex items-start">
+                            <div class="bg-red-500 text-white p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-file-alt text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-semibold text-red-700 mb-3">書類やノートの放置</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-red-600">危険な行為</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• 机の上に書類を置いたまま外出</li>
+                                            <li>• 会議室にホワイトボードの内容を残す</li>
+                                            <li>• プリンターに印刷物を放置</li>
+                                            <li>• 廃棄書類をそのままゴミ箱へ</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-red-600">想定される被害</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• 競合他社への情報流出</li>
+                                            <li>• 顧客の個人情報漏洩</li>
+                                            <li>• 新商品開発情報の盗取</li>
+                                            <li>• 営業戦略の漏洩</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="risk-item bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200">
+                        <div class="flex items-start">
+                            <div class="bg-orange-500 text-white p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-comments text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-semibold text-orange-700 mb-3">会話からの情報漏洩</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-orange-600">注意すべき場所</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• エレベーター内での会話</li>
+                                            <li>• 喫煙所・休憩室での雑談</li>
+                                            <li>• 電車内での電話</li>
+                                            <li>• レストランでの商談</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-orange-600">リスクの例</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• 同業他社の社員が聞いている</li>
+                                            <li>• SNSで拡散される可能性</li>
+                                            <li>• 意図しない第三者への情報提供</li>
+                                            <li>• 録音される危険性</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="risk-item bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200">
+                        <div class="flex items-start">
+                            <div class="bg-purple-500 text-white p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-usb text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-semibold text-purple-700 mb-3">USBメモリや私物PCの使用</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-purple-600">問題となる行為</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• 私物USBでのデータ移動</li>
+                                            <li>• 自宅PCでの業務作業</li>
+                                            <li>• クラウドサービスへの無断保存</li>
+                                            <li>• 私物スマートフォンでの撮影</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-purple-600">危険性</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• マルウェア感染のリスク</li>
+                                            <li>• データの紛失・盗難</li>
+                                            <li>• セキュリティ管理外での情報保存</li>
+                                            <li>• アクセス権限の管理不能</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="risk-item bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
+                        <div class="flex items-start">
+                            <div class="bg-green-500 text-white p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-semibold text-green-700 mb-3">フィッシングメールや不審な添付ファイル</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-green-600">典型的な手口</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• 銀行を装ったパスワード要求</li>
+                                            <li>• 宅配業者を装った不在通知</li>
+                                            <li>• 上司を装った緊急の指示</li>
+                                            <li>• ウイルス感染を警告する偽メール</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-green-600">被害例</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• IDやパスワードの盗取</li>
+                                            <li>• マルウェアによるシステム感染</li>
+                                            <li>• 不正送金や詐欺被害</li>
+                                            <li>• 機密情報の外部送信</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="risk-item bg-gradient-to-r from-pink-50 to-pink-100 p-6 rounded-lg border border-pink-200">
+                        <div class="flex items-start">
+                            <div class="bg-pink-500 text-white p-3 rounded-full mr-4 flex-shrink-0">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-semibold text-pink-700 mb-3">SNSやチャットでの不用意な発言</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-pink-600">問題となる投稿</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• 新商品開発の進捗をほのめかす</li>
+                                            <li>• 顧客名や案件名を具体的に記載</li>
+                                            <li>• 会社の内部情報を愚痴として投稿</li>
+                                            <li>• 職場の写真に機密情報が写り込み</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold mb-2 text-pink-600">影響</h5>
+                                        <ul class="text-gray-700 text-sm space-y-1">
+                                            <li>• 情報の意図しない拡散</li>
+                                            <li>• 会社の信頼度低下</li>
+                                            <li>• 顧客との関係悪化</li>
+                                            <li>• 法的責任の発生</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 基本ルール -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="section-gradient-4 p-6 text-white">
+                <h2 class="text-3xl font-bold mb-3">
+                    <i class="fas fa-lock mr-3"></i>4. 基本ルール（必ず守るべきこと）
+                </h2>
+                <p class="text-lg opacity-90">全社員が遵守すべき6つの重要ルール</p>
+            </div>
+            <div class="p-8">
+                <div class="grid gap-6">
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-red-500 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-ban text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-red-700">🔒 機密情報は絶対に社外に持ち出さない</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                            <div>
+                                <h4 class="font-semibold mb-2">禁止事項</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 業務データの私物デバイスへの保存</li>
+                                    <li>• 個人メールアドレスへの業務メール転送</li>
+                                    <li>• 許可されていないクラウドサービスの使用</li>
+                                    <li>• 業務書類の自宅への持ち帰り</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">適切な対応</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 会社指定のVPN環境でのリモートアクセス</li>
+                                    <li>• 承認されたクラウドサービスの利用</li>
+                                    <li>• セキュアな環境でのデータ共有</li>
+                                    <li>• 業務完了後の確実なデータ削除</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-500 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-file-alt text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-700">📝 ノートや資料を机に置きっぱなしにしない</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                            <div>
+                                <h4 class="font-semibold mb-2">クリアデスク原則</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 離席時は全ての書類を収納</li>
+                                    <li>• 机上に機密情報を残さない</li>
+                                    <li>• 共有スペースでの書類放置禁止</li>
+                                    <li>• プリンターでの印刷物の即座回収</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">実践方法</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 鍵付きキャビネットでの保管</li>
+                                    <li>• 作業終了時の机上確認習慣</li>
+                                    <li>• 一時的な離席でも書類を片付け</li>
+                                    <li>• ホワイトボードの内容消去</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-500 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-volume-down text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-yellow-700">🗣️ 社内情報を安易に口にしない</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                            <div>
+                                <h4 class="font-semibold mb-2">注意すべき場所</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• エレベーター・廊下</li>
+                                    <li>• 喫煙所・休憩室</li>
+                                    <li>• 外出先（レストラン、電車など）</li>
+                                    <li>• オンライン会議の前後</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">対策</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 機密性の高い話は会議室で</li>
+                                    <li>• 第三者がいる場所での業務会話回避</li>
+                                    <li>• 固有名詞（顧客名・商品名）の使用注意</li>
+                                    <li>• 電話での機密情報のやり取り禁止</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-500 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-desktop text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-green-700">💻 パソコンのロックは離席時に必ず実施</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                            <div>
+                                <h4 class="font-semibold mb-2">ロックが必要な場面</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• トイレ・休憩での短時間離席</li>
+                                    <li>• 会議参加のための移動</li>
+                                    <li>• 昼休みや外出時</li>
+                                    <li>• 他の人に話しかけられた時</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">ロック方法</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• Windows: Windowsキー + L</li>
+                                    <li>• Mac: Control + Command + Q</li>
+                                    <li>• 自動ロック設定（5分以内推奨）</li>
+                                    <li>• スクリーンセーバーのパスワード設定</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-500 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-trash text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-purple-700">📦 ゴミ箱にも注意（シュレッダー使用）</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                            <div>
+                                <h4 class="font-semibold mb-2">シュレッダー対象</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 顧客情報が記載された書類</li>
+                                    <li>• 印刷ミスした機密文書</li>
+                                    <li>• 手書きのメモや付箋</li>
+                                    <li>• CDやUSBメモリなどの記録媒体</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">適切な廃棄方法</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• クロスカット方式での細断</li>
+                                    <li>• 機密レベルに応じた廃棄区分</li>
+                                    <li>• 電子媒体の物理破壊</li>
+                                    <li>• 廃棄記録の適切な管理</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-red-500 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope-open text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-red-700">✉ 不審なメールを開かない、報告する</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                            <div>
+                                <h4 class="font-semibold mb-2">不審メールの特徴</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 差出人が不明・偽装されている</li>
+                                    <li>• 緊急性を装い行動を促す内容</li>
+                                    <li>• 不自然な日本語や文法ミス</li>
+                                    <li>• 怪しいリンクや添付ファイル</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">対処法</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 開封せずに情報システム部門へ報告</li>
+                                    <li>• リンクのクリック・添付ファイル実行禁止</li>
+                                    <li>• 個人情報の入力絶対禁止</li>
+                                    <li>• 疑わしい場合は必ず相談</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">重要な心構え</h3>
+                    </div>
+                    <p class="text-lg">これらのルールは「面倒な制約」ではなく、「会社と自分を守るための重要な習慣」です。毎日の実践により、自然に身につくよう心がけましょう。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: ケーススタディ -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="section-gradient-5 p-6 text-white">
+                <h2 class="text-3xl font-bold mb-3">
+                    <i class="fas fa-question-circle mr-3"></i>5. ケーススタディ（〇✕クイズ形式）
+                </h2>
+                <p class="text-lg opacity-90">実際のシーンで正しい判断ができるかチェックしよう</p>
+            </div>
+            <div class="p-8">
+                <div class="mb-6 bg-blue-50 p-4 rounded-lg">
+                    <p class="text-blue-800"><i class="fas fa-info-circle mr-2"></i>以下の場面で、適切な行動を〇、不適切な行動を✕で答えてください。</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Quiz 1 -->
+                    <div class="quiz-item bg-gray-50 p-6 rounded-lg border">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">
+                            <i class="fas fa-utensils mr-2 text-orange-500"></i>問題1: ランチタイム
+                        </h4>
+                        <p class="mb-4 text-gray-700">「同僚とランチを食べながら、隣の席で進行中の新商品開発プロジェクトについて詳しく話し合った。レストランは社内の人しかいないようだった。」</p>
+                        <div class="flex space-x-4 mb-4">
+                            <button class="quiz-option bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(1, false, this)">〇 適切</button>
+                            <button class="quiz-option bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(1, true, this)">✕ 不適切</button>
+                        </div>
+                        <div id="answer1" class="hidden p-4 rounded-lg">
+                            <p class="font-semibold mb-2">正解: ✕ 不適切</p>
+                            <p class="text-gray-700">レストランなどの公共の場所では、どこで誰が聞いているか分かりません。社内の人しかいないように見えても、他の客や店員が聞いている可能性があります。機密性の高い話は適切な場所で行いましょう。</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz 2 -->
+                    <div class="quiz-item bg-gray-50 p-6 rounded-lg border">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">
+                            <i class="fas fa-coffee mr-2 text-brown-500"></i>問題2: 休憩時間
+                        </h4>
+                        <p class="mb-4 text-gray-700">「5分間だけ休憩室に行くため、パソコンの画面に顧客リストを表示したまま席を離れた。すぐ戻る予定だったのでロックしなかった。」</p>
+                        <div class="flex space-x-4 mb-4">
+                            <button class="quiz-option bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(2, false, this)">〇 適切</button>
+                            <button class="quiz-option bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(2, true, this)">✕ 不適切</button>
+                        </div>
+                        <div id="answer2" class="hidden p-4 rounded-lg">
+                            <p class="font-semibold mb-2">正解: ✕ 不適切</p>
+                            <p class="text-gray-700">時間の長短に関わらず、席を離れる際は必ずパソコンをロックする必要があります。5分間でも十分に機密情報を見られたり、操作されたりする可能性があります。Windowsキー+Lで簡単にロックできます。</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz 3 -->
+                    <div class="quiz-item bg-gray-50 p-6 rounded-lg border">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>問題3: メール対応
+                        </h4>
+                        <p class="mb-4 text-gray-700">「銀行を名乗るメールで『不正アクセスが検出されたため、24時間以内にパスワードを変更してください』という内容が届いた。リンクをクリックせず、直接銀行のホームページにアクセスして確認した。」</p>
+                        <div class="flex space-x-4 mb-4">
+                            <button class="quiz-option bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(3, true, this)">〇 適切</button>
+                            <button class="quiz-option bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(3, false, this)">✕ 不適切</button>
+                        </div>
+                        <div id="answer3" class="hidden p-4 rounded-lg">
+                            <p class="font-semibold mb-2">正解: 〇 適切</p>
+                            <p class="text-gray-700">メール内のリンクをクリックせず、独自に公式サイトにアクセスして確認する行動は非常に適切です。フィッシングメールの多くは緊急性を装ってリンクをクリックさせようとします。疑わしい場合は必ず別途確認しましょう。</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz 4 -->
+                    <div class="quiz-item bg-gray-50 p-6 rounded-lg border">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">
+                            <i class="fas fa-home mr-2 text-green-500"></i>問題4: 在宅勤務
+                        </h4>
+                        <p class="mb-4 text-gray-700">「在宅勤務中、作業効率を上げるため、顧客データを私物のUSBメモリにコピーした。作業終了後、USBメモリのデータは削除した。」</p>
+                        <div class="flex space-x-4 mb-4">
+                            <button class="quiz-option bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(4, false, this)">〇 適切</button>
+                            <button class="quiz-option bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(4, true, this)">✕ 不適切</button>
+                        </div>
+                        <div id="answer4" class="hidden p-4 rounded-lg">
+                            <p class="font-semibold mb-2">正解: ✕ 不適切</p>
+                            <p class="text-gray-700">私物のUSBメモリに業務データをコピーすることは、たとえ後で削除したとしても情報漏洩のリスクが高く、原則禁止です。在宅勤務では会社が提供するVPN環境や承認されたクラウドサービスを利用しましょう。</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz 5 -->
+                    <div class="quiz-item bg-gray-50 p-6 rounded-lg border">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">
+                            <i class="fas fa-trash mr-2 text-gray-500"></i>問題5: 書類廃棄
+                        </h4>
+                        <p class="mb-4 text-gray-700">「印刷ミスした顧客名簿をそのままゴミ箱に捨てた。どうせ印刷失敗で読めない部分が多いから問題ないと思った。」</p>
+                        <div class="flex space-x-4 mb-4">
+                            <button class="quiz-option bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(5, false, this)">〇 適切</button>
+                            <button class="quiz-option bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(5, true, this)">✕ 不適切</button>
+                        </div>
+                        <div id="answer5" class="hidden p-4 rounded-lg">
+                            <p class="font-semibold mb-2">正解: ✕ 不適切</p>
+                            <p class="text-gray-700">印刷ミスであっても、顧客情報が含まれる書類は必ずシュレッダーで破棄する必要があります。読めない部分があっても、読める情報から個人が特定される可能性があります。機密情報は必ず適切に廃棄しましょう。</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz 6 -->
+                    <div class="quiz-item bg-gray-50 p-6 rounded-lg border">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">
+                            <i class="fab fa-twitter mr-2 text-blue-400"></i>問題6: SNS投稿
+                        </h4>
+                        <p class="mb-4 text-gray-700">「新しいプロジェクトが始まって嬉しかったので、『新しい案件でワクワクしてます！頑張ります！』とSNSに投稿した。具体的な内容は書かなかった。」</p>
+                        <div class="flex space-x-4 mb-4">
+                            <button class="quiz-option bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(6, true, this)">〇 適切</button>
+                            <button class="quiz-option bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300" onclick="showAnswer(6, false, this)">✕ 不適切</button>
+                        </div>
+                        <div id="answer6" class="hidden p-4 rounded-lg">
+                            <p class="font-semibold mb-2">正解: 〇 適切</p>
+                            <p class="text-gray-700">具体的な案件名や顧客名、プロジェクトの詳細を書かずに、一般的な表現で仕事への意欲を表すのは問題ありません。ただし、会社のSNSガイドラインがある場合はそれに従い、投稿前に内容を再確認する習慣をつけましょう。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-trophy text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">学習のポイント</h3>
+                    </div>
+                    <p class="text-lg">全問正解できましたか？間違えた問題があれば、なぜその行動が不適切なのかをしっかり理解し、実際の業務で同じミスを繰り返さないよう注意しましょう。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: 万が一トラブルが起きたら -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="section-gradient-6 p-6 text-white">
+                <h2 class="text-3xl font-bold mb-3">
+                    <i class="fas fa-exclamation-triangle mr-3"></i>6. 万が一トラブルが起きたら？
+                </h2>
+                <p class="text-lg opacity-90">緊急時の正しい対処法と連絡体制</p>
+            </div>
+            <div class="p-8">
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-lg text-center">
+                        <div class="bg-red-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-red-700 mb-3">1. すぐに連絡</h3>
+                        <p class="text-gray-700">上司・情報システム担当へ即座に報告</p>
+                    </div>
+                    <div class="bg-orange-50 border border-orange-200 p-6 rounded-lg text-center">
+                        <div class="bg-orange-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-eye-slash text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-orange-700 mb-3">2. 隠さない</h3>
+                        <p class="text-gray-700">事実を正確に報告し、隠蔽しない</p>
+                    </div>
+                    <div class="bg-yellow-50 border border-yellow-200 p-6 rounded-lg text-center">
+                        <div class="bg-yellow-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-times text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-yellow-700 mb-3">3. 自己判断禁止</h3>
+                        <p class="text-gray-700">独断での対処は避け、指示を仰ぐ</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                        <h3 class="text-xl font-bold text-red-700 mb-4">
+                            <i class="fas fa-bug mr-3"></i>情報漏洩・セキュリティインシデント
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold mb-2 text-red-600">発生例</h4>
+                                <ul class="text-gray-700 text-sm space-y-1">
+                                    <li>• メールの誤送信</li>
+                                    <li>• USBメモリ・書類の紛失</li>
+                                    <li>• 不正アクセスの発見</li>
+                                    <li>• マルウェア感染の疑い</li>
+                                    <li>• 個人情報の漏洩</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2 text-red-600">即座に行うこと</h4>
+                                <ul class="text-gray-700 text-sm space-y-1">
+                                    <li>• 上司・情シス部門への連絡</li>
+                                    <li>• 被害拡大防止措置</li>
+                                    <li>• 状況の詳細記録</li>
+                                    <li>• 関係者への情報共有</li>
+                                    <li>• 外部機関への届出準備</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+                        <h3 class="text-xl font-bold text-blue-700 mb-4">
+                            <i class="fas fa-envelope-open mr-3"></i>フィッシングメール・不審メール
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold mb-2 text-blue-600">対処手順</h4>
+                                <ol class="text-gray-700 text-sm space-y-1 list-decimal list-inside">
+                                    <li>メールを開かない・リンクをクリックしない</li>
+                                    <li>添付ファイルを実行しない</li>
+                                    <li>情報システム部門に報告</li>
+                                    <li>同僚への注意喚起を検討</li>
+                                    <li>似たようなメールの確認</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2 text-blue-600">もしクリックしてしまったら</h4>
+                                <ul class="text-gray-700 text-sm space-y-1">
+                                    <li>• 即座にネットワークから切断</li>
+                                    <li>• パスワードの変更</li>
+                                    <li>• システム管理者への緊急連絡</li>
+                                    <li>• ウイルススキャンの実行</li>
+                                    <li>• 被害状況の確認</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                        <h3 class="text-xl font-bold text-green-700 mb-4">
+                            <i class="fas fa-desktop mr-3"></i>システム障害・機器トラブル
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold mb-2 text-green-600">よくあるトラブル</h4>
+                                <ul class="text-gray-700 text-sm space-y-1">
+                                    <li>• パソコンの動作不良</li>
+                                    <li>• ネットワーク接続エラー</li>
+                                    <li>• データファイルの破損</li>
+                                    <li>• プリンター等の機器故障</li>
+                                    <li>• ソフトウェアの異常終了</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2 text-green-600">基本対応</h4>
+                                <ul class="text-gray-700 text-sm space-y-1">
+                                    <li>• 再起動前に作業内容を保存</li>
+                                    <li>• エラーメッセージのスクリーンショット</li>
+                                    <li>• 情報システム部門への連絡</li>
+                                    <li>• 代替手段での業務継続検討</li>
+                                    <li>• 復旧までの影響範囲確認</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gray-800 text-white p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-phone mr-3"></i>緊急連絡先
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold mb-2">情報システム部門</h4>
+                            <p class="text-sm mb-1">内線: XXXX-XXXX</p>
+                            <p class="text-sm mb-3">Email: security@company.com</p>
+                            <p class="text-xs text-gray-300">※システム関連のトラブル全般</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">総務・管理部門</h4>
+                            <p class="text-sm mb-1">内線: YYYY-YYYY</p>
+                            <p class="text-sm mb-3">Email: admin@company.com</p>
+                            <p class="text-xs text-gray-300">※情報漏洩・セキュリティ事故</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-red-600 p-3 rounded">
+                        <p class="text-sm"><i class="fas fa-exclamation-triangle mr-2"></i><strong>重要:</strong> 夜間・休日の緊急事態は、緊急連絡網に従って対応してください。</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-lightbulb text-yellow-600 text-xl mr-3"></i>
+                        <h4 class="text-lg font-semibold text-yellow-800">トラブル時の心構え</h4>
+                    </div>
+                    <p class="text-yellow-800">トラブルは誰にでも起こりうることです。重要なのは、迅速で正確な報告と適切な対処です。責任を感じすぎず、冷静に行動しましょう。早期対応により被害を最小限に抑えることができます。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: まとめ -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="section-gradient-7 p-6 text-white">
+                <h2 class="text-3xl font-bold mb-3">
+                    <i class="fas fa-handshake mr-3"></i>7. まとめとお願い
+                </h2>
+                <p class="text-lg opacity-90">継続的な意識向上で会社を守ろう</p>
+            </div>
+            <div class="p-8">
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg text-center">
+                        <div class="bg-blue-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-sync text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-700 mb-3">継続的な確認</h3>
+                        <p class="text-gray-700">定期的にルールを見直し、最新の脅威情報をチェック</p>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 p-6 rounded-lg text-center">
+                        <div class="bg-green-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-700 mb-3">習慣化</h3>
+                        <p class="text-gray-700">セキュリティ対策を日常的な習慣として身につける</p>
+                    </div>
+                    <div class="bg-purple-50 border border-purple-200 p-6 rounded-lg text-center">
+                        <div class="bg-purple-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-question-circle text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-700 mb-3">積極的な相談</h3>
+                        <p class="text-gray-700">分からないことがあれば、遠慮なく質問・相談する</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">
+                            <i class="fas fa-shield-alt mr-3"></i>情報セキュリティは全員参加
+                        </h3>
+                        <p class="text-lg mb-4">情報セキュリティは、特定の部署や専門家だけの責任ではありません。会社で働く全ての人が参加してこそ、真に安全な環境を築くことができます。</p>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <h4 class="font-semibold mb-2">一人ひとりができること</h4>
+                                <ul class="space-y-1">
+                                    <li>• 基本ルールの遵守</li>
+                                    <li>• 最新情報への関心</li>
+                                    <li>• 同僚への注意喚起</li>
+                                    <li>• 継続的な学習</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">組織全体で目指すこと</h4>
+                                <ul class="space-y-1">
+                                    <li>• セキュリティ文化の醸成</li>
+                                    <li>• オープンなコミュニケーション</li>
+                                    <li>• 継続的な改善</li>
+                                    <li>• 信頼関係の構築</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                        <h3 class="text-xl font-bold text-yellow-800 mb-3">
+                            <i class="fas fa-calendar-check mr-3"></i>今日から始める5つの習慣
+                        </h3>
+                        <div class="grid md:grid-cols-5 gap-4">
+                            <div class="text-center">
+                                <div class="bg-yellow-200 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">
+                                    <span class="font-bold text-yellow-800">1</span>
+                                </div>
+                                <p class="text-sm text-gray-700">離席時の画面ロック</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-yellow-200 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">
+                                    <span class="font-bold text-yellow-800">2</span>
+                                </div>
+                                <p class="text-sm text-gray-700">書類の整理整頓</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-yellow-200 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">
+                                    <span class="font-bold text-yellow-800">3</span>
+                                </div>
+                                <p class="text-sm text-gray-700">メール確認の習慣</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-yellow-200 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">
+                                    <span class="font-bold text-yellow-800">4</span>
+                                </div>
+                                <p class="text-sm text-gray-700">適切な廃棄方法</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-yellow-200 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">
+                                    <span class="font-bold text-yellow-800">5</span>
+                                </div>
+                                <p class="text-sm text-gray-700">疑問は即座に相談</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 border border-green-200 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-green-800 mb-3">
+                            <i class="fas fa-graduation-cap mr-3"></i>継続的な学習のために
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                            <div>
+                                <h4 class="font-semibold mb-2">定期的な研修</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 年2回のセキュリティ研修参加</li>
+                                    <li>• 最新の脅威に関する情報共有</li>
+                                    <li>• 実践的な演習への参加</li>
+                                    <li>• 他部署との事例共有</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">日常的な情報収集</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• 社内セキュリティ通信の確認</li>
+                                    <li>• セキュリティ関連ニュースのチェック</li>
+                                    <li>• 同僚との情報交換</li>
+                                    <li>• 疑問点の積極的な質問</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gradient-to-r from-gray-800 to-gray-900 text-white p-8 rounded-lg text-center">
+                    <h3 class="text-2xl font-bold mb-4">
+                        <i class="fas fa-hands-helping mr-3"></i>最後に
+                    </h3>
+                    <p class="text-lg mb-4">情報セキュリティは「面倒なルール」ではなく、「会社の未来を守る大切な取り組み」です。</p>
+                    <p class="text-base mb-6">皆様一人ひとりの意識と行動が、会社の信頼を支え、お客様の大切な情報を守る盾となります。</p>
+                    <div class="bg-blue-600 p-4 rounded-lg inline-block">
+                        <p class="font-semibold text-lg">ご不明な点がございましたら、いつでもお気軽にご相談ください。</p>
+                        <p class="text-sm mt-2">みんなで協力して、安全で安心な職場環境を作っていきましょう！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 bg-gray-800 text-white rounded-xl">
+            <div class="mb-4">
+                <i class="fas fa-shield-alt text-3xl text-blue-400 mb-2"></i>
+                <h3 class="text-xl font-bold">情報セキュリティ教育資料</h3>
+            </div>
+            <p class="text-gray-300 mb-2">発行日: 2024年</p>
+            <p class="text-gray-400 text-sm">この資料に関するご質問は、情報システム部門までお気軽にお問い合わせください。</p>
+        </footer>
+    </div>
+
+    <script>
+        function showAnswer(questionNumber, isCorrect, buttonElement) {
+            // Hide all buttons for this question
+            const buttons = buttonElement.parentElement.querySelectorAll('.quiz-option');
+            buttons.forEach(btn => {
+                btn.style.display = 'none';
+            });
+            
+            // Show answer
+            const answerDiv = document.getElementById('answer' + questionNumber);
+            answerDiv.classList.remove('hidden');
+            
+            // Set answer background color
+            if (isCorrect) {
+                answerDiv.className = answerDiv.className.replace('hidden', 'quiz-correct text-white');
+            } else {
+                answerDiv.className = answerDiv.className.replace('hidden', 'quiz-incorrect text-white');
+            }
+            
+            // Add result message
+            const resultMessage = document.createElement('div');
+            resultMessage.className = 'mt-4 p-3 rounded text-center text-white font-semibold';
+            if (isCorrect) {
+                resultMessage.className += ' bg-green-600';
+                resultMessage.innerHTML = '<i class="fas fa-check-circle mr-2"></i>正解です！';
+            } else {
+                resultMessage.className += ' bg-red-600';
+                resultMessage.innerHTML = '<i class="fas fa-times-circle mr-2"></i>残念、不正解です。解説を確認しましょう。';
+            }
+            answerDiv.appendChild(resultMessage);
+            
+            // Smooth scroll to answer
+            answerDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Add some interactive elements on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to risk items
+            const riskItems = document.querySelectorAll('.risk-item');
+            riskItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
